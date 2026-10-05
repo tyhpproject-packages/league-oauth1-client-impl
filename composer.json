@@ -1,0 +1,45 @@
+{
+    "name": "tyhpdef/league-oauth1-client-impl",
+    "description": "Implementation package for tyhpdef/league-oauth1-client. Require tyhpdef/league-oauth1-client, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "1.11.0.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/php-ext-openssl": "@dev",
+                "tyhpdef/guzzlehttp-guzzle": "@dev",
+                "tyhpdef/psr-http-message": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/league-oauth1-client"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "league/oauth1-client": "1.11.0"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/php-ext-openssl": "@dev"
+    }
+}
